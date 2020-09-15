@@ -1,0 +1,11 @@
+pip install pymongo
+import pymongo
+from pymongo import MongoClient
+client = MongoClient('mongodb://localhost:27017/')
+client.list_database_names()
+db = client.Jcomponent
+collect_names = db.list_collection_names()
+collect_names
+collection = db['datasets']
+db.datasets.find()
+print(db.datasets.find_one())
